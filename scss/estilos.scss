@@ -1,0 +1,593 @@
+@import 'bases/colors';
+
+
+/*reseteo css*/
+
+
+
+*{
+    margin: 0;
+    padding: 2px;
+    box-sizing: border-box;
+}
+
+html{
+
+    font-size: 62.5%;
+}
+
+body { 
+    
+    font-family: "Open Sans Condensed" , sans-serif;
+    font-size: 25px;
+}
+
+a { /*color de las letras en gral*/
+
+    color: $Gris;
+    text-decoration: none;
+    font-weight: bold;
+
+}
+
+p { /*color parrafos*/
+
+    color: $colorParrafos;
+}
+
+
+/*mobile first*/
+
+.grillaArea {
+    display: grid;
+    grid-template-areas:
+    "camelia   camelia   camelia   camelia"
+    "menu   menu   menu   menu"
+    "carrito   carrito   carrito   carrito"
+    "fotos   fotos   fotos   fotos"
+    "redes   redes   redes   redes";
+    grid-template-rows: 100% 5% 2% 3fr 5%;
+    grid-template-columns: 1fr 1fr 1fr 1fr;   
+
+}
+
+.header{
+    grid-area: camelia;    
+    text-align: right; 
+    background-image: url(../imagenes/pexels-photo-1470171.jpeg);
+    display: inline;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+.headerLogo{
+
+    width: $margin-50*4;
+    margin-left: $margin-50;
+}
+
+header img {
+
+    border-radius: 100%;
+}
+
+.headerNav{
+
+    margin-right: $margin-50;
+    width: 40%;
+        
+}
+
+.headerNav ul{
+
+    list-style: none;
+    display: inline;
+    justify-content: space-between;
+        
+}
+
+.headerNav ul ul { 
+
+    position: absolute;
+    display: none;
+    background-color: $colorHeader;
+    padding: 0%;    
+        
+}
+
+
+ul li:hover ul {
+
+    display: block;
+
+}
+
+nav{
+
+    grid-area: menu;
+        
+}
+
+.carrito{ 
+    grid-area: carrito;
+    text-align: right;
+    margin: 0%;
+    padding: 1%;
+}
+
+
+.imagenDelCarrito{
+
+    width: $margin-50*3;
+    height: $margin-50*6;
+    object-fit: cover;
+    margin: $margin-50/5;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    margin-bottom: $margin-50;
+        
+            
+}
+    
+.velaRose{
+    margin-top: 260px ;
+    margin-right: $margin-50*10;
+    text-align: left;
+    margin-left: -170px;
+        
+}
+    
+
+.imagenesForma img{
+
+    grid-area: fotos;
+    width: 420px;
+    height: 400px;
+    object-fit: cover;
+    margin: 0px;
+    padding:0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+        
+}
+
+.dFlex {
+    display: inline;       
+            
+}
+
+.footerColor {
+
+    grid-area: redes;
+    background-color: $colorFooter;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#redesSociales{
+
+    text-align: right;
+}
+
+.faqs {
+    background-color: $colorFaqs;
+        
+}
+
+.card img {
+
+    width: $margin-50*6;
+    
+}
+    
+.text-center{
+    
+    justify-content: center;
+}
+    
+.toast{
+    
+    background-color: $colorToast1;
+    margin-right: $margin-50/10;
+    text-align: center;
+}
+    
+.toast-body{
+    
+    background-color: $colorToastBody;
+}
+
+
+
+/*tablet*/
+
+@media (min-width: 480px) and (max-width: 1024px) {
+    
+
+    .grillaArea {
+        display: grid;
+        grid-template-areas:
+        "camelia   camelia   camelia   camelia"
+        "menu   menu   menu   menu"
+        "carrito   carrito   carrito   carrito"
+        "fotos   fotos   fotos   fotos"
+        "redes   redes   redes   redes";
+        grid-template-rows: 100% 5% 2% 3fr 5%;
+        grid-template-columns: 1fr 1fr 1fr 1fr;   
+
+    }
+
+    .header{
+        grid-area: camelia;    
+        text-align: right; 
+        background-image: url(../imagenes/pexels-photo-1470171.jpeg);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+
+
+    .headerLogo{
+
+        width: $margin-50*4;
+        margin-left: $margin-50;
+    }
+
+    header img {
+
+        border-radius: 100%;
+    }
+
+    .headerNav{
+
+        margin-right: $margin-50;
+        width: 40%;
+        
+    }
+
+    .headerNav ul{
+
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        
+    }
+
+    .headerNav ul ul { 
+
+        position: absolute;
+        display: none;
+        background-color: $colorHeader;
+        padding: 0%;    
+        
+    }
+
+
+    ul li:hover ul {
+
+        display: block;
+
+    }
+
+    nav{
+
+        grid-area: menu;
+        
+    }
+
+    .carrito{ 
+        grid-area: carrito;
+        text-align: right;
+        margin: 0%;
+        padding: 1%;
+    }
+
+
+    .imagenDelCarrito{
+
+        width: $margin-50*3;
+        height: $margin-50*6;
+        object-fit: cover;
+        margin: $margin-50/5;
+        padding: 20px;
+        display: flex;
+        flex-direction: row;
+        justify-content: right;
+        margin-bottom: $margin-50;
+            
+                
+    }
+        
+    .velaRose{
+        margin-top: 260px ;
+        margin-right: $margin-50*10;
+        text-align: left;
+        margin-left: -170px;
+            
+    }
+
+
+    .imagenesForma img{
+
+        grid-area: fotos;
+        width: 600px;
+        height: 400px;
+        object-fit: cover;
+        margin: 5px 5px 5px 50px;
+        padding: 5px 5px 5px 50px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        
+    }
+
+    .dFlex 
+    {
+        display: inline-flex;
+       
+            
+    }
+
+    .footerColor {
+
+        grid-area: redes;
+        background-color: $colorFooter;
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    #redesSociales{
+
+        text-align: right;
+    }
+
+    .faqs {
+        background-color: $colorFaqs;
+        
+    }
+
+    .card img {
+
+        width: $margin-50*6;
+    
+    }
+    
+    .text-center{
+    
+        justify-content: center;
+    }
+    
+    .toast{
+    
+        background-color: $colorToast2;
+        margin-right: $margin-50/10;
+        text-align: center;
+    }
+    
+    .toast-body{
+    
+        background-color: $colorToastBody;
+    }
+
+     
+}
+
+/*escritorio*/
+
+@media (min-width: 1025px) {
+
+
+    .grillaArea {
+        display: grid;
+        grid-template-areas:
+        "camelia   camelia   camelia   camelia"
+        "menu   menu   menu   menu"
+        "carrito   carrito   carrito   carrito"
+        "fotos   fotos   fotos   fotos"
+        "redes   redes   redes   redes";
+        grid-template-rows: 100% 5% 2% 3fr 5%;
+        grid-template-columns: 1fr 1fr 1fr 1fr;   
+
+    }
+
+    .header{
+        grid-area: camelia;    
+        text-align: right; 
+        background-image: url(../imagenes/pexels-photo-1470171.jpeg);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+
+
+    .headerLogo{
+
+        width: $margin-50*4;
+        margin-left: $margin-50;
+    }
+
+    header img {
+
+        border-radius: 100%;
+    }
+
+    .headerNav{
+
+        margin-right: $margin-50;
+        width: 40%;
+        
+    }
+
+    .headerNav ul{
+
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        
+    }
+
+    .headerNav ul ul { 
+
+        position: absolute;
+        display: none;
+        background-color: $colorHeader;
+        padding: 0%;    
+        
+    }
+
+
+    ul li:hover ul {
+
+        display: block;
+
+    }
+
+    nav{
+
+        grid-area: menu;
+        
+    }
+
+    .carrito{ 
+        grid-area: carrito;
+        text-align: right;
+        margin: 0%;
+        padding: 1%;
+    }
+
+    .imagenDelCarrito{
+
+        width: $margin-50*3;
+        height: $margin-50*6;
+        object-fit: cover;
+        margin: $margin-50/5;
+        padding: 20px;
+        display: flex;
+        flex-direction: row;
+        justify-content: right;
+        margin-bottom: $margin-50;
+            
+                
+    }
+        
+    .velaRose{
+        margin-top: 260px ;
+        margin-right: $margin-50*10;
+        text-align: left;
+        margin-left: -170px;
+            
+    }
+
+    .imagenesForma img{
+
+        grid-area: fotos;
+        width: 600px;
+        height: 400px;
+        object-fit: cover;
+        margin: 5px 5px 5px 50px;
+        padding: 5px 5px 5px 50px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        
+    }
+
+    .dFlex 
+    {
+        display: inline-flex;
+       
+            
+    }
+
+    .footerColor {
+
+        grid-area: redes;
+        background-color: $colorFooter;
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    #redesSociales{
+
+        text-align: right;
+    }
+
+    .faqs {
+        background-color: $colorFaqs;
+        
+    }
+
+    .card img {
+
+        width: $margin-50*6;
+    
+    }
+    
+    .text-center{
+    
+        justify-content: center;
+    }
+    
+    .toast{
+    
+        background-color: $colorToast3;
+        margin-right: 1000px;
+    }
+    
+    .toast-body{
+    
+        background-color: $colorToastBody;
+    }
+
+}
+
+.transition {
+    transition: all 2s;
+}
+
+.transition :hover {
+    transition: all 2s;
+    font-size: 30px;
+    font-weight: bold ;
+
+}
+
+.animacion{
+
+    animation-duration: 2s;
+    animation-name: appear;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+        
+}
+
+@keyframes appear {
+
+0% {
+
+    opacity: 0;
+
+}
+
+100% {
+
+    opacity: 1;
+}
+
+}
+
+.containerShoppingCar
+{
+    width: 100%;
+    background-color:$colorCarrito ;
+    display: inline-flex;
+    justify-content: flex-end;
+}
+
